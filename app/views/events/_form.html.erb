@@ -1,0 +1,40 @@
+<%= form_for(@event) do |f| %>
+  <%= render 'shared/errors', object: @event %>
+<fieldset>
+  <ol>
+    <li class="required">
+      <%= f.label :name %>
+      <%= f.text_field :name, autofocus: true %>
+    </li>
+    <li class="required">
+      <%= f.label :description %>
+      <%= f.text_area :description, cols:40, rows: 7 %>
+    </li>
+    <li class="required">
+      <%= f.label :location %>
+      <%= f.text_field :location %>
+    </li>
+    <li class="required">
+      <%= f.label :starts_at %><br/>
+      <%= f.datetime_select :starts_at %>
+    </li>
+    <li class="required">
+      <%= f.label :price %>
+      <%= f.number_field :price %>
+    </li>
+    <li class="required">
+      <%= f.label :image_file_name %><br/>
+      <%= f.text_field :image_file_name, size: 30, placeholder: "GIF, JPG, or PNG file name" %>
+    </li>
+    <li class="required">
+      <%= f.label :capacity %><br/>
+      <%= f.number_field :capacity %>
+    </li>
+  </ol>
+  <p>
+    <%= f.submit %>
+    <%= link_to 'Cancel', events_path, class: 'button' %>
+  </p>
+
+</fieldset>
+<% end %>
