@@ -9,7 +9,7 @@ describe "Viewing the list of events" do
 
     visit events_url
 
-    expect(page).to have_text("3 Events")
+    
     expect(page).to have_text(event1.name)
     expect(page).to have_text(event2.name)
     expect(page).to have_text(event3.name)
