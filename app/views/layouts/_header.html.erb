@@ -3,7 +3,12 @@
     <h1><%= link_to 'Events', root_path %></h1>
     <nav>
       <p>
-        <%= link_to "Tweet us!", "http://twitter.com/pragmaticstudio" %>
+        <% if current_user %>
+          <%= link_to current_user.name, current_user %>
+        <% else %>
+          <%= link_to "Sign Up", signup_path %>
+          <%= link_to "Sign In", new_session_path %>
+        <% end %>
       </p>
     </nav>
   </div>
