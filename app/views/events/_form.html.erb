@@ -30,6 +30,9 @@
       <%= f.label :capacity %><br/>
       <%= f.number_field :capacity %>
     </li>
+    <li>
+      <%= f.collection_check_boxes(:category_ids, Category.all, :id, :name) %>
+    </li>
   </ol>
   <p>
     <%= f.submit %>
