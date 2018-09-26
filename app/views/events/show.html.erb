@@ -1,3 +1,5 @@
+<% content_for(:title, @event.name) %>
+
 <article id="event" class="event">
   <header>
     <%= image_for(@event) %>
@@ -19,25 +21,6 @@
     <% end %>
 
   <% end %>
-
-
-  <% if @likers.any? %>
-    <h3>Likers</h3>
-    <ul>
-      <% @likers.each do |user| %>
-        <li>
-          <%= link_to user.name, user %>
-        </li>
-      <% end %>
-    </ul>
-  <% end %>
-
-  <h3>Categories</h3>
-  <ul>
-    <% @categories.each do |category| %>
-      <li><%= category.name %></li>
-    <% end %>
-  </ul>
 
   <h3>Where</h3>
   <p><%= @event.location %></p>
@@ -68,3 +51,22 @@
     <% end %>
   </nav>
 </footer>
+
+<% content_for(:side) do %>
+  <% if @likers.any? %>
+    <h3>Likers</h3>
+    <ul>
+      <% @likers.each do |user| %>
+        <li>
+          <%= link_to user.name, user %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+  <h3>Categories</h3>
+  <ul>
+    <% @categories.each do |category| %>
+      <li><%= category.name %></li>
+    <% end %>
+  </ul>
+<% end %>
