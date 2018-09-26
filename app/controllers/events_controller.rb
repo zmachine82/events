@@ -1,4 +1,6 @@
 class EventsController < ApplicationController
+  before_action :require_signin, except: [:index, :show]
+  before_action :require_admin, except: [:index, :show]
   def index
     @events = Event.upcoming
   end
@@ -39,6 +41,9 @@ class EventsController < ApplicationController
     redirect_to events_url
   end
   private
+
+    
+
 
     def event_params
       event_params = params.require(:event).
