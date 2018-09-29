@@ -133,23 +133,23 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
-    rspec-core (3.8.0)
-      rspec-support (~> 3.8.0)
-    rspec-expectations (3.8.1)
+    rspec-core (3.5.4)
+      rspec-support (~> 3.5.0)
+    rspec-expectations (3.5.0)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.8.0)
-    rspec-mocks (3.8.0)
+      rspec-support (~> 3.5.0)
+    rspec-mocks (3.5.0)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.8.0)
-    rspec-rails (3.8.0)
+      rspec-support (~> 3.5.0)
+    rspec-rails (3.5.2)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       railties (>= 3.0)
-      rspec-core (~> 3.8.0)
-      rspec-expectations (~> 3.8.0)
-      rspec-mocks (~> 3.8.0)
-      rspec-support (~> 3.8.0)
-    rspec-support (3.8.0)
+      rspec-core (~> 3.5.0)
+      rspec-expectations (~> 3.5.0)
+      rspec-mocks (~> 3.5.0)
+      rspec-support (~> 3.5.0)
+    rspec-support (3.5.0)
     sass (3.5.7)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -206,7 +206,7 @@ DEPENDENCIES
   pg
   puma (~> 3.11)
   rails (~> 5.2.1)
-  rspec-rails
+  rspec-rails (~> 3.5.0)
   sass-rails (~> 5.0)
   sqlite3
   turbolinks (~> 5)
@@ -218,4 +218,4 @@ RUBY VERSION
    ruby 2.3.3p222
 
 BUNDLED WITH
-   1.16.3
+   1.16.5
